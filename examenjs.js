@@ -148,10 +148,11 @@ console.log("Lo Lograste :D, Que grande XD");
  1️⃣ Responde las siguientes preguntas en la sección de comentarios:
 ¿Qué es un array?
 R/Es un dato de tipo objeto que puede contener desde 0 o mas datos, se organizan de manera secuencial.
-¿Qué es un objeto?
+¿Qué es un objeto?s
 R/Es un tipo de dato que  contiene propiedades y metodos las cuales la definen.
 ¿Cuándo es mejor usar objetos o arrays?
-R/ No necesariamente una es mejor que otra, dependiendo del caso de uso se debe usar una u otra.
+R/ En caso que sea necesario mejor modificar todos los elementos es mejor el array y si los queremos organizar de manera secuencial, en cambio si queremos darle propiedades a un elemento es mejor 
+usar un dato tipo objeto ;D.
 ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
 R/ Si ,ademas es muy  util cuando se necesita organizar muchos datos.
 2️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
