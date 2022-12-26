@@ -41,7 +41,7 @@ console.log(`El Nombre completo es ${nombreCompleto} y el dinero total es ${dine
 /**
  * 1️⃣ Responde las siguientes preguntas en la sección de comentarios:
 ¿Qué es una función?
-R/ Es un bloque de codigo que se define, el cual cumple una utilidad y se puede llamar a través de la codificación. Debe tener valores de entrada ya que si no tiene seria un procedimiento.
+R/ Es un bloque de codigo que se define(encapsulación), el cual cumple una utilidad y se puede llamar a través de la codificación. Debe tener valores de entrada ya que si no tiene seria un procedimiento.
 ¿Cuándo me sirve usar una función en mi código?
 R/Cuando el codigo se va utilizar muchas veces, para modalizar y cuando se desea tener un codigo más legible y organizado.
 ¿Cuál es la diferencia entre parámetros y argumentos de una función?
