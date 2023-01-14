@@ -4,15 +4,19 @@ const burguerMenu = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuCarritoIcon = document.querySelector('.navbar-shopping-cart');
 const aside = document.querySelector('.product-detail');
-const cardsContainer = document.querySelector('.cards-container')
+const cardsContainer = document.querySelector('.cards-container');
+const cardShowContainer = document.querySelector('.productShow-detail');
+const cardShowContainerClose = document.querySelector('.productShow-detail-close');
 
 menuEmail.addEventListener('click',toggleDesktopMenu);
 burguerMenu.addEventListener('click',toggleMobileMenu);
 menuCarritoIcon.addEventListener('click',toggleCarritoAside);
+cardShowContainerClose.addEventListener('click', closeCardShowContainer);
 
 function toggleDesktopMenu(){
 const isAsideMenuOpen = !aside.classList.contains('inactive');
 const isDesktopMenuOpen = !desktopMenu.classList.contains('inactive');
+const isShowCardMenuOpen= !cardShowContainer.classList.contains('inactive');
 if (isAsideMenuOpen){
    aside.classList.add('inactive');
    desktopMenu.classList.remove('inactive');
@@ -26,6 +30,9 @@ if (isDesktopMenuOpen){
 else{
    desktopMenu.classList.remove('inactive');
 }
+if (isShowCardMenuOpen) {
+   cardShowContainer.classList.add('inactive');
+}
 
 }
 //Forma Profesor
@@ -35,6 +42,7 @@ function toggleDesktopMenuProfesor(){
 function toggleMobileMenu(){
    const ismobileMenuOpen = !mobileMenu.classList.contains('inactive');
    const isAsideMenuOpen = !aside.classList.contains('inactive');
+   const isShowCardMenuOpen = !cardShowContainer.classList.contains('inactive');
    if (ismobileMenuOpen){
       mobileMenu.classList.add('inactive');
    }
@@ -46,6 +54,9 @@ function toggleMobileMenu(){
       mobileMenu.classList.remove('inactive');
      
    }
+   if (isShowCardMenuOpen){
+      cardShowContainer.classList.add('inactive');
+   }
    
    
 }
@@ -53,6 +64,11 @@ function toggleCarritoAside(){
    const ismobileMenuOpen = !mobileMenu.classList.contains('inactive');
    const isAsideMenuOpen = !aside.classList.contains('inactive');
    const isDesktopMenuOpen = !desktopMenu.classList.contains('inactive');
+   const isShowCardMenuOpen= !cardShowContainer.classList.contains('inactive');
+   if (isShowCardMenuOpen){
+      cardShowContainer.classList.add('inactive');
+   }
+   
    if (isDesktopMenuOpen){
       desktopMenu.classList.add('inactive');
    }
@@ -70,23 +86,44 @@ function toggleCarritoAside(){
    
    
 }
+function openCardShowContainer(){
+const isAsideMenuOpen = !aside.classList.contains('inactive');
+const isDesktopMenuOpen = !desktopMenu.classList.contains('inactive');
+if (isAsideMenuOpen){
+   aside.classList.add('inactive')
+}
+if (isDesktopMenuOpen){
+   desktopMenu.classList.add('inactive')
+}
+const ismobileMenuOpen = !mobileMenu.classList.contains('inactive');
+if (ismobileMenuOpen){
+      mobileMenu.classList.add('inactive');
+   }
+
+cardShowContainer.classList.remove('inactive');
+
+}
+function closeCardShowContainer(){
+   
+   cardShowContainer.classList.add('inactive');
+}
 const productList = [];
 productList.push({name:'Bike',price:120,image:'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 });
 productList.push ({
    name:'Bicycle helmet',
    price: 1200,
-   image: 'https://assets.specialized.com/i/specialized/60821-104_HLMT_ALIGN-II-HLMT-MIPS-CE-BLK-BLKREFL-S-M_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto'
+   image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Bicycle_Helmet_0085.jpg/220px-Bicycle_Helmet_0085.jpg',
 });
 productList.push ({
    name:'Bicycle helmet',
    price: 1600,
-   image: 'https://m.media-amazon.com/images/I/61eExL-rIAL._AC_SL1001_.jpg'
+   image: 'https://trek.scene7.com/is/image/TrekBicycleProducts/BontragerBlazeWaveCelHelmetCPSC_25359_E_Primary?$responsive-pjpg$&cache=on,on&wid=1920&hei=1440'
 });
 productList.push ({
    name:'Bicycle helmet',
    price: 1500,
-   image: 'https://assets.specialized.com/i/specialized/60822-140_HLMT_CHAMONIX-HLMT-MIPS-CE-MRN-M-L_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto'
+   image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAVrKYlG39VviX_BmKNnOiLY6xndLqDYTywosY5yVrSDL2tZYHlXBo-bfYvD73kfXomJ0&usqp=CAU',
 });
 productList.push ({
    name:'Seat',
@@ -134,6 +171,9 @@ function renderProducts(arr){
    
       const sourceImgProduct = document.createElement('img');
       sourceImgProduct.setAttribute('src',product.image);
+      sourceImgProduct.addEventListener('click',openCardShowContainer);
+      
+
    
       const productInfo = document.createElement('div');
       productInfo.classList.add('product-info');
@@ -171,4 +211,5 @@ function renderProducts(arr){
    }
 }
 renderProducts(productList);
+
 
