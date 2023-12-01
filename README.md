@@ -4,4 +4,4 @@
 - 🎯 Application exercises to understand JS uses.
 - 💯 100% HTML, CSS, and JS.
 - 😲 DOM manipulation, a website project, and real-life examples of basic JS usage.
-- [🚀 Project]("https://jevdev2304.github.io/cursoPracticoJS/practicoJs-CursoFront/index.html")
+- [🚀 Project](https://jevdev2304.github.io/cursoPracticoJS/practicoJs-CursoFront/index.html")
