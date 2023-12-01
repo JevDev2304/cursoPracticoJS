@@ -1,12 +1,9 @@
-# Repositorio Curso Práctico Javascript🧩
-###### En este repositorio encontraras desde un examen básico de JS hasta una implementación de una pagina web en HTML, CSS y JS 🖥
+# 📁 Practical JavaScript Course Repository 🧩
+###### In this repository, you'll find everything from a basic JS review to the implementation of a website in HTML, CSS, and JS 🖥️
 
-- Ejercicios de aplicación para entender usos de JS . 🎯
+- 🎯 Application exercises to understand JS uses.
+- 💯 100% HTML, CSS, and JS.
+- 😲 DOM manipulation, a website project, and real-life examples of basic JS usage.
+- [🚀 Project](https://platzi.com/cursos/javascript-practico/")
 
-- 100% HTML,CSS y JS.💯
-
-- Manejo del DOM, proyecto de una pagina web y ejemplos reales de uso de JS básicos. 😲
-
-
-
-Posdata: Si quieres aprender mas acerca de las temáticas, este curso es de gran utilidad : [Curso Práctico de JavaScript](https://platzi.com/cursos/javascript-practico/") 🙃
+Postscript: If you want to learn more about these topics, this course is extremely helpful: [Practical JavaScript Course](https://platzi.com/cursos/javascript-practico/") 🙃
